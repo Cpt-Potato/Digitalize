@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Моя первая страничка!</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            // alert("Привет, Мир!");
+            let h1 = document.querySelector("h1");
+            h1.addEventListener("click", function () {
+                // h1.style.color = "red";
+                document.querySelector("img").style.display = "none";
+            })
+            document.querySelector("p:nth-child(2)").style.color = "green";
+        }
+    </script>
+</head>
+<body>
+<h1>Привет, мир!</h1>
+<p>Меня зовут Алекс и я веб-разработчик</p>
+<h2>Я люблю программировать.</h2>
+<p>
+    <img id="avatar" class="my-photo centered" src="/img/alex.jpg"/>
+    Hello there
+</p>
+<a class="yt-link" href="https://www.youtube.com/watch?v=-0JG1PHbaCI&list=PLIkR6r3CZlnPx_wR_l-pWFVHtZlErfnM-&t=2249s"
+   target="_blank">Ютубчик</a>
+
+<form action="/send-feedback/" class="feedback-form" method="POST">
+    <p>Отправьте мне сообщение</p>
+    <p><input type="text" name="first_name" placeholder="Ваше имя"/></p>
+    <p><textarea name="message" placeholder="Ваше сообщение"></textarea></p>
+    <p><input type="submit" value="Отправить"/></p>
+</form>
+
+</body>
+</html>
